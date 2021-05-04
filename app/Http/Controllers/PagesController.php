@@ -10,4 +10,9 @@ class PagesController extends Controller
     {
         return view('test');
     }
+
+    public function emailConfirmed()
+    {
+        return view('email_confirm');
+    }
 }

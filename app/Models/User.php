@@ -23,6 +23,7 @@ class User extends Authenticatable
         'login',
         'dob',
         'email',
+        'email_status',
         'password',
     ];
 

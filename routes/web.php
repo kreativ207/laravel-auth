@@ -22,4 +22,6 @@ Route::get('/test', [PagesController::class, 'test'])->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(['auth', 'email.confirmed']);
+
+Route::get('/email-confirm', [PagesController::class, 'emailConfirmed'])->name('email_confirm')->middleware(['auth', 'email.noconfirmed']);
